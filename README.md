@@ -1,31 +1,19 @@
-# GA_Project: Trulia API
+White Wine Quality
 
-Data Science Project on the Real Estate Market Via Trulia's API
+Goal: Predict Quality ranking of white wine based on its chemical properties.
 
-Facts about Trulia's API
-Taken from: http://developer.trulia.com/docs/TruliaStats
+"A predictive model developed on this data is expected to provide guidance to vineyards regarding quality and price expected on their produce without heavy reliance on volatility of wine tasters."  - <a href='https://onlinecourses.science.psu.edu/stat857/node/223'>Source</a>
 
-1. Currently, there are two available types of statistics: traffic and listings. You may specify one or the other using the statType parameter to receive a lighter XML response, or receive both by omitting the statType parameter.
-
-2. Traffic statistics about a location currently include the percentage of that location's city/national/state traffic where applicable. For example, a city's traffic numbers will give both its percentage of state and national traffic, while a neighborhood's traffic numbers will include both of these plus a city percentage as well.
-
-3. Traffic statistics are available per day from 2007-06-01 to the present.
-
-4. Listings statistics about a location currently include average price data, both as an aggregate and subdivided by number of bedrooms.
-
-5. Listings statistics are available per week from 2007-11-10 to the present with the exception of median listing price stats, for which the earliest possible date has a weekEndingDate of 2007-01-05. The API will return any week which has a day within the date range specified in the call.
+Data was obtained from source above. For this projcet we only use the white wine data (Wine_data.csv) provided and not the training and test data which is also available. Instead we create a train_test_split via Scikit-Learn.
 
 
+Hypothesis:
+We believe the chemical properties of wine do not contribute to its quality.
 
+Questions:
+1. Which chemical properties play a bigger role in the quality of white wine?
 
-Using Trulia's API we want to test the following hypotheses:
+Methods & Models:
+1. Multiple Regression 
+2. K-Nearest Neighbors for Quality Classification
 
-1. The number of home listings in San Francisco, CA in 2014 is less than the number of listings in 2008.
-2. The median price of homes in SF in 2014 is much higher than the median price in 2008.
-
-
-Questions: 
-
-1. How have the prices changed over the years? In what year do we see the biggest jump in price from the previous?
-2. What is the average and median listing price of homes? by number of bedrooms? by location?
-3. Are there any trends in the searches?
